@@ -1,0 +1,37 @@
+{
+    "id": "spring-petclinic-clickstart",
+    "name": "Spring PetClinic App",
+    "source": "github",
+    "description" : "Spring PetClinic App deployed on Tomcat7 via Jenkins with maven",
+    "doc-url" : "https://github.com/CloudBees-community/spring-petclinic-clickstart/blob/master/readme.md",
+    "icon" : "https://raw.github.com/CloudBees-community/spring-petclinic-clickstart/master/clickstart-icon.png",
+
+    "disabled" : false,
+    "supported-by" : "community",
+    "app-package" : "https://examples.ci.cloudbees.com/job/clickstart/job/spring-petclinic-clickstart/lastSuccessfulBuild/artifact/target/petclinic.war",
+    "order" : 3,
+   
+    "runtime": {
+        "type": "tomcat7",
+        "app-variables": {
+            "spring.profiles.active": "jpa,javaee",
+            "jdbc.initLocation" :"classpath:db/mysql/initDB.sql",
+            "jdbc.dataLocation": "classpath:db/mysql/populateDB.sql",
+            "hibernate.dialect": "org.hibernate.dialect.MySQLDialect",
+            "jpa.database":"MYSQL"
+        }
+    },
+    "databases": [
+        {
+            "type": "mysql",
+            "alias": "petclinic"
+        }
+    ],
+    "build-with-jenkins": {
+        "template": {
+            "type": "maven",
+            "options": {
+            }
+        }
+    }
+}

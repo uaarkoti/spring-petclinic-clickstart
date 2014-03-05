@@ -1,5 +1,11 @@
 # Spring PetClinic Sample Application
 
+# Spring PetClinic on CloudBees Platform
+
+**[Spring PetClinic on CloudBees Platform](cloudbees.md)**
+
+# Spring PetClinic Sample Application
+
 ## What does it look like?
 -spring-petclinic has been deployed here on cloudfoundry: http://gopetclinic.cfapps.io/
 
