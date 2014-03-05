@@ -9,7 +9,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
     <description>Spring PetClinic sample application</description>
     
     <context-param>
-        <param-name>spring.profiles.active</param-name>
+        <param-name>spring.profiles.default</param-name>
         <param-value>jpa</param-value>
     </context-param>
 
